@@ -1,27 +1,41 @@
 using UnityEngine;
 
-public class CharacterMovement
+public class CharacterMovement : MonoBehaviour
 {
-	private readonly Rigidbody2D _rigidbody;
-	private readonly UserInput _userInput;
-	private readonly float _movementSpeed;
-	private readonly float _slipDecayRate;
+	[SerializeField] private Rigidbody2D rigidbody;
+	[SerializeField] private UserInput userInput;
+	[SerializeField] private float movementSpeed;
+	[SerializeField] private float slipDecayRate;
+	[SerializeField] private float slipSpeed;
 	
 	private float _slipSpeed;
 	private float _remainingSlipSpeed;
 	private Vector2 _lastDirection;
 
-	public CharacterMovement(Rigidbody2D rigidbody, UserInput userInput, float movementSpeed, float slipDecayRate)
+	private void Update()
 	{
-		_rigidbody = rigidbody;
-		_userInput = userInput;
-		_movementSpeed = movementSpeed;
-		_slipDecayRate = slipDecayRate;
+		HandleMovement();
+	}
+	
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag("IceCube"))
+		{
+			ApplySlip();
+		}
 	}
 
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.CompareTag("IceCube"))
+		{
+			DiscardSlip();
+		}
+	}
+	
 	public void HandleMovement()
 	{
-		Vector2 movement = _userInput.Axes * _movementSpeed;
+		Vector2 movement = userInput.Axes * movementSpeed;
 
 		if (movement != Vector2.zero)
 		{
@@ -29,11 +43,11 @@ public class CharacterMovement
 			_remainingSlipSpeed += _slipSpeed * Time.deltaTime;
 		}
 
-		_rigidbody.velocity = (movement * _movementSpeed) + (_lastDirection * _remainingSlipSpeed);
+		rigidbody.velocity = (movement * movementSpeed) + (_lastDirection * _remainingSlipSpeed);
 
 		if (_slipSpeed > 0 && _remainingSlipSpeed != 0)
 		{
-			_remainingSlipSpeed -= _slipDecayRate * Time.deltaTime;
+			_remainingSlipSpeed -= slipDecayRate * Time.deltaTime;
 
 			if (_remainingSlipSpeed < 0)
 			{
