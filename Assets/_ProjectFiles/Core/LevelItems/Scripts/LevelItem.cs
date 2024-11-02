@@ -1,11 +1,10 @@
-using DG.Tweening;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class LevelItem : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private LevelItemInfo itemInfo;
+    [SerializeField] private ConfigurableEffect pickUpEffect;
     public LevelItemInfo ItemInfo => itemInfo;
     
     private void Start()
@@ -17,6 +16,9 @@ public class LevelItem : MonoBehaviour
 
     public void Collect()
     {
+        var effect = Instantiate(pickUpEffect, transform.position, Quaternion.identity, null);
+        effect.Play(true);
+        
         Destroy(gameObject);
     }
 }
