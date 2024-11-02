@@ -15,8 +15,8 @@ namespace _ProjectFiles.Core.Video
             _videoPlayer = GetComponent<VideoPlayer>();
             _videoPlayer.Prepare();
             _soundService = ServiceLocator.GetService<SoundService>();
-            Update(_soundService.Volume);
-            _soundService.OnValueUpdated += Update;
+            UpdateVolume(_soundService.Volume);
+            _soundService.OnValueUpdated += UpdateVolume;
         }
 
         private void OnEnable()
@@ -24,14 +24,14 @@ namespace _ProjectFiles.Core.Video
             if (_soundService is null)
                 return;
             
-            _soundService.OnValueUpdated += Update;
+            _soundService.OnValueUpdated += UpdateVolume;
         }
 
         private void OnDisable()
         {
-            _soundService.OnValueUpdated -= Update;
+            _soundService.OnValueUpdated -= UpdateVolume;
         }
         
-        private void Update(float value) => _videoPlayer.SetDirectAudioVolume(0, value);
+        private void UpdateVolume(float value) => _videoPlayer.SetDirectAudioVolume(0, value);
     }
 }

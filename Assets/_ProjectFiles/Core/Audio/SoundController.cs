@@ -13,8 +13,8 @@ namespace _ProjectFiles.Core.Audio
         {
             _audioSource = GetComponent<AudioSource>();
             _soundService = ServiceLocator.GetService<SoundService>();
-            Update(_soundService.Volume);
-            _soundService.OnValueUpdated += Update;
+            UpdateVolume(_soundService.Volume);
+            _soundService.OnValueUpdated += UpdateVolume;
         }
         
         private void OnEnable()
@@ -22,14 +22,14 @@ namespace _ProjectFiles.Core.Audio
             if (_soundService is null)
                 return;
             
-            _soundService.OnValueUpdated += Update;
+            _soundService.OnValueUpdated += UpdateVolume;
         }
 
         private void OnDisable()
         {
-            _soundService.OnValueUpdated -= Update;
+            _soundService.OnValueUpdated -= UpdateVolume;
         }
         
-        private void Update(float value) => _audioSource.volume = value;
+        private void UpdateVolume(float value) => _audioSource.volume = value;
     }
 }
