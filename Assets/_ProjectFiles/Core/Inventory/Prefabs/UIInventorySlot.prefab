@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1367921159255239098}
+  returnDuration: 0.3
 --- !u!222 &6153619904220300342
 CanvasRenderer:
   m_ObjectHideFlags: 0

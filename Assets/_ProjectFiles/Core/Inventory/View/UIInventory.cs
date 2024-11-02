@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIInventory : MonoBehaviour
 {
     [SerializeField] private List<LevelItemInfo> itemInfos;
     [SerializeField] private UIInventorySlot uiInventorySlot;
-    [SerializeField] private Transform slotsContent;
+    [SerializeField] private RectTransform slotsContent;
     
     private Inventory _inventory;
     
@@ -16,6 +17,7 @@ public class UIInventory : MonoBehaviour
         foreach (var inventorySlot in _inventory.Slots)
         {
             var slot = Instantiate(uiInventorySlot, slotsContent);
+            
             uiInventorySlot.Initialize(inventorySlot);
         }
     }

@@ -1,4 +1,4 @@
-using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -6,15 +6,18 @@ using UnityEngine.UI;
 public class UIInventoryItem : MonoBehaviour, IPointerDownHandler, IPointerMoveHandler, IPointerUpHandler
 {
     [SerializeField] private Image itemImage;
+    [SerializeField] private float returnDuration;
     private LevelItemInfo _levelItemInfo;
     
     private bool _isBeingDragged = false;
     private Vector2 _dragDelta;
+    private Vector2 _origin;
     
     public void Initialize(LevelItemInfo levelItemInfo)
     {
         itemImage.sprite = levelItemInfo.ItemIcon;
         _levelItemInfo = levelItemInfo;
+        _origin = transform.position;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -39,6 +42,6 @@ public class UIInventoryItem : MonoBehaviour, IPointerDownHandler, IPointerMoveH
 
     private void PlaceItem()
     {
-        transform.localPosition = Vector2.zero;
+        transform.DOLocalMove(Vector3.zero, returnDuration);
     }
 }
