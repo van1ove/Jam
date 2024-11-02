@@ -17,4 +17,19 @@ public class CharacterContainer : MonoBehaviour
     {
         _characterMovement.HandleMovement();
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("IceCube"))
+        {
+            _characterMovement.ApplySlip();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("IceCube"))
+        {
+            _characterMovement.DiscardSlip();
+        }
+    }
 }
