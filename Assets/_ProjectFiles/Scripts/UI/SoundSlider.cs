@@ -21,6 +21,7 @@ namespace _ProjectFiles.Scripts.UI
         private void OnEnable()
         {
             _soundVolumeSlider.value = _soundVolumeService.Volume;
+            UpdateSoundText(_soundVolumeService.Volume);
             _soundVolumeSlider.onValueChanged.AddListener(_soundVolumeService.UpdateVolumeValue);
             _soundVolumeSlider.onValueChanged.AddListener(UpdateSoundText);
         }
