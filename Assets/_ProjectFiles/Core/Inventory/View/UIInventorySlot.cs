@@ -5,15 +5,13 @@ public class UIInventorySlot : MonoBehaviour
 {
     [SerializeField] private TMP_Text itemCountText;
     [SerializeField] private Transform itemContent;
-    [SerializeField] private UIInventoryItem itemPrefab;
+    [SerializeField] private UIInventoryItem item;
     private InventorySlot _slot;
     
     public void Initialize(InventorySlot slot)
     {
         _slot = slot;
         _slot.OnItemChanged += OnInventorySlotChanged;
-
-        var item = Instantiate(itemPrefab, itemContent);
         item.Initialize(slot.ItemInfo);
     }
 
@@ -24,6 +22,6 @@ public class UIInventorySlot : MonoBehaviour
 
     private void OnDestroy()
     {
-        _slot.OnItemChanged -= OnInventorySlotChanged;
+        if (_slot != null) _slot.OnItemChanged -= OnInventorySlotChanged;
     }
 }
