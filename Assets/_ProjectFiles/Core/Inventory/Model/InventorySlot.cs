@@ -21,6 +21,11 @@ public class InventorySlot
     public void RemoveItem()
     {
         ItemCount--;
+        if (ItemCount == 0)
+        {
+            throw new InvalidOperationException($"Items count of type {ItemInfo.ItemId} is less than zero");
+        }
+        
         OnItemChanged?.Invoke();
     }
 }
