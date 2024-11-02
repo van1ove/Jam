@@ -51,5 +51,6 @@ public class CharacterMovement
 	public void DiscardSlip()
 	{
 		_slipSpeed = 0;
+		_remainingSlipSpeed = 0;
 	}
 }
