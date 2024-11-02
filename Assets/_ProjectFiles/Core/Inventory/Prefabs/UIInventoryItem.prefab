@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 8566814692440120390}
   - component: {fileID: 698929166775335311}
   - component: {fileID: 1574404742868029751}
+  - component: {fileID: 8716983663085793382}
   m_Layer: 5
   m_Name: UIInventoryItem
   m_TagString: Untagged
@@ -157,34 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 5928058161107041467}
-  returnDuration: 0.3
-  disabledColor: {r: 1, g: 1, b: 1, a: 0.7176471}
-  enabledColor: {r: 1, g: 1, b: 1, a: 1}
-  scalePerDistance:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: -0.16680574
-      outSlope: -0.16680574
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.10080806
-    - serializedVersion: 3
-      time: 1
-      value: 0.5
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  scaleGrowSpeed: 1
+  inventoryItemView: {fileID: 8716983663085793382}
 --- !u!222 &1574404742868029751
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -193,3 +167,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8436645410766928574}
   m_CullTransparentMesh: 1
+--- !u!114 &8716983663085793382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8436645410766928574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db03d913521459fb6d34afb21d66117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  returnDuration: 0.3
+  disabledColor: {r: 1, g: 1, b: 1, a: 0.6117647}
+  enabledColor: {r: 1, g: 1, b: 1, a: 1}
+  scalePerDistance:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.00045962655
+      outSlope: 0.00045962655
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.21486346
+    - serializedVersion: 3
+      time: 60
+      value: 0.5
+      inSlope: -0.00083792006
+      outSlope: -0.00083792006
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.09949875
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
