@@ -3,11 +3,13 @@ using UnityEngine;
 public class LevelItem : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private LevelItemInfo levelItemInfo;
+    [SerializeField] private LevelItemInfo itemInfo;
+    public LevelItemInfo ItemInfo => itemInfo;
+    
     
     private void Start()
     {
-        spriteRenderer.sprite = levelItemInfo.ItemSprite;
+        spriteRenderer.sprite = itemInfo.ItemSprite;
     }
 
     public void Collect()

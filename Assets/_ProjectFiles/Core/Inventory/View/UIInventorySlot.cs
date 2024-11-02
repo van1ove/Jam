@@ -13,11 +13,27 @@ public class UIInventorySlot : MonoBehaviour
         _slot = slot;
         _slot.OnItemChanged += OnInventorySlotChanged;
         item.Initialize(slot.ItemInfo);
+        
+        UpdateSlot();
     }
 
-    private void OnInventorySlotChanged()
+    private void UpdateSlot()
     {
         itemCountText.text = _slot.ItemCount.ToString();
+
+        if (_slot.ItemCount == 0)
+        {
+            item.Disable();
+        }
+        else
+        {
+            item.Enable();
+        }
+    }
+    
+    private void OnInventorySlotChanged()
+    {
+        UpdateSlot();
     }
 
     private void OnDestroy()

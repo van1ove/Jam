@@ -6,9 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="46289e9e-1be0-4905-9817-c9ffe823e4e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Character/Scripts/CharacterContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Character/Scripts/CharacterContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Character/Scripts/CharacterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Character/Scripts/CharacterMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/Model/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/Model/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/Model/InventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/Model/InventorySlot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/Prefabs/UIInventorySlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/Prefabs/UIInventorySlot.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/View/UIInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/View/UIInventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/View/UIInventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/View/UIInventoryItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/View/UIInventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/View/UIInventorySlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Barrel.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Barrel.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Bottle.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Bottle.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Tile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Tile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Scripts/LevelItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Scripts/LevelItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Sprites/tile.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Sprites/tile.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Bogdan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Bogdan.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +32,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/467a840a914a47078e4ae9b0b1e8779e46ac00/0f/a2ab959a/List`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_ProjectFiles/Core/Infrastructure/Bootstrap/GameEntryPoint.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
@@ -33,6 +52,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.5069984",
     "git-widget-placeholder": "Bogdan",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -90,7 +110,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728639237867</updated>
       <workItem from="1728639241517" duration="11000" />
-      <workItem from="1730529475134" duration="12025000" />
+      <workItem from="1730529475134" duration="16623000" />
     </task>
     <servers />
   </component>
