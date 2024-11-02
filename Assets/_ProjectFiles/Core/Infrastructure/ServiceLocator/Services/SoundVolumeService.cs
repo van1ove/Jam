@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace _ProjectFiles.Core.Infrastructure.ServiceLocator.Services
 {
-    public class SoundVolumeService : IService
+    public class SoundService : IService
     {
         private const float MinVolume = 0f;
         private const float MaxVolume = 100f;
