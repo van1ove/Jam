@@ -2,22 +2,21 @@ using UnityEngine;
 
 public class CharacterMovement
 {
-	private Rigidbody2D _rigidbody;
-	private UserInput _userInput;
-	private float _movementSpeed;
-
+	private readonly Rigidbody2D _rigidbody;
+	private readonly UserInput _userInput;
+	private readonly float _movementSpeed;
+	private readonly float _slipDecayRate;
+	
 	private float _slipSpeed;
 	private float _remainingSlipSpeed;
-	private float _slipDecayRate = 0.5f;
 	private Vector2 _lastDirection;
 
-	public CharacterMovement(Rigidbody2D rigidbody, UserInput userInput, float movementSpeed)
+	public CharacterMovement(Rigidbody2D rigidbody, UserInput userInput, float movementSpeed, float slipDecayRate)
 	{
 		_rigidbody = rigidbody;
 		_userInput = userInput;
 		_movementSpeed = movementSpeed;
-		_slipSpeed = 0f;
-		_remainingSlipSpeed = 0f;
+		_slipDecayRate = slipDecayRate;
 	}
 
 	public void HandleMovement()

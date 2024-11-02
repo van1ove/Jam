@@ -17,15 +17,15 @@ public class Inventory
         }
     }
     
-    public void Add(string itemId)
+    public void Add(LevelItemInfo item)
     {
-        var itemSlot = _slots.FirstOrDefault(x => x.ItemInfo.ItemId == itemId);
-        _slots.Add(itemSlot);
+        var itemSlot = _slots.FirstOrDefault(x => x.ItemInfo.ItemId == item.ItemId);
+        if (itemSlot != null) itemSlot.AddItem();
     }
 
-    public void Remove(string itemId)
+    public void Remove(LevelItemInfo item)
     {
-        var itemSlot = _slots.FirstOrDefault(x => x.ItemInfo.ItemId == itemId);
+        var itemSlot = _slots.FirstOrDefault(x => x.ItemInfo.ItemId == item.ItemId);
         if (itemSlot != null) itemSlot.RemoveItem();
     }
 }

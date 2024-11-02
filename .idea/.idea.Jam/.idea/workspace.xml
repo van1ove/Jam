@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46289e9e-1be0-4905-9817-c9ffe823e4e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Jam/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Jam/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Jam/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Jam/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/Prefabs/UIInventorySlot.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/Prefabs/UIInventorySlot.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Barrel.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Barrel.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Bottle.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Bottle.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Tile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Data/Tile.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Sprites/barrel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Sprites/barrel.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Sprites/bottle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Sprites/bottle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Sprites/tile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/LevelItems/Sprites/tile.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/View/UIInventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/View/UIInventoryItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/View/UIInventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Inventory/View/UIInventorySlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Bogdan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Bogdan.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Audio/SoundVolumeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Audio/SoundVolumeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Infrastructure/ServiceLocator/Services/SoundVolumeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Infrastructure/ServiceLocator/Services/SoundVolumeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Scripts/UI/SoundSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Scripts/UI/SoundSlider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Video/VideoTexture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Video/VideoTexture.renderTexture" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +20,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_ProjectFiles/Scripts/UI/SoundSlider.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2oHbPXH1pN6pmArcl30AtBjZVkz" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -53,7 +38,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Bogdan",
+    "git-widget-placeholder": "Vanya",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,11 +46,18 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.updates",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\berez\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\berez\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\berez\\AppData\\Local\\Symbols\\src"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="E:\Frameworks\Unity\versions\2022.3.32f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.32f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath E:\Repositories\Unity\Jam -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\Repositories\Unity\Jam" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -73,7 +65,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="E:\Frameworks\Unity\versions\2022.3.32f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.32f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath E:\Repositories\Unity\Jam -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\Repositories\Unity\Jam" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -90,10 +82,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11476">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11476" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -111,6 +103,7 @@
       <updated>1728639237867</updated>
       <workItem from="1728639241517" duration="11000" />
       <workItem from="1730529475134" duration="10878000" />
+      <workItem from="1730561363659" duration="862000" />
     </task>
     <servers />
   </component>
