@@ -1,13 +1,14 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName = "Items/Level Item Info", fileName = "LevelItemInfo")]
 public class LevelItemInfo : ScriptableObject
 {
-    [SerializeField] private string _itemId;
-    [SerializeField] private Sprite _itemSprite;
-    [SerializeField] private Sprite _itemIcon;
+    [SerializeField] private string itemId;
+    [SerializeField] private Sprite levelSprite;
+    [SerializeField] private Sprite inventorySprite;
     
-    public string ItemId => _itemId;
-    public Sprite ItemSprite => _itemSprite;
-    public Sprite ItemIcon => _itemIcon;
+    public string ItemId => itemId;
+    public Sprite LevelSprite => levelSprite;
+    public Sprite InventorySprite => inventorySprite;
 }

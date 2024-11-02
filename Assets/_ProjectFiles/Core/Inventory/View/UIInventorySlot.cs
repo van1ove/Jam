@@ -23,11 +23,11 @@ public class UIInventorySlot : MonoBehaviour
 
         if (_slot.ItemCount == 0)
         {
-            item.Disable();
+            item.View.Disable();
         }
         else
         {
-            item.Enable();
+            item.View.Enable();
         }
     }
     
