@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace _ProjectFiles.Core.Infrastructure.ServiceLocator.Services
@@ -8,6 +9,8 @@ namespace _ProjectFiles.Core.Infrastructure.ServiceLocator.Services
         private const float MaxVolume = 100f;
         private const string VolumeKey = "Volume";
 
+        public event Action<float> OnValueUpdated;
+        
         public float Volume
         {
             get
@@ -23,11 +26,12 @@ namespace _ProjectFiles.Core.Infrastructure.ServiceLocator.Services
                 float val = Mathf.Clamp(value, MinVolume, MaxVolume);
                 PlayerPrefs.SetFloat(VolumeKey, val);
             }
-        }
+        }   
 
         public void UpdateVolumeValue(float newValue)
         {
             Volume = newValue;
+            OnValueUpdated?.Invoke(Volume);
         }
     }
 }
