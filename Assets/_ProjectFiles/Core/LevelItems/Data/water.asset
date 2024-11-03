@@ -15,3 +15,4 @@ MonoBehaviour:
   itemId: water
   levelSprite: {fileID: 21300000, guid: fe9eb83ac385c1245a40f50dbf7e2177, type: 3}
   inventorySprite: {fileID: 21300000, guid: fe9eb83ac385c1245a40f50dbf7e2177, type: 3}
+  lavaSprite: {fileID: 21300000, guid: fe9eb83ac385c1245a40f50dbf7e2177, type: 3}

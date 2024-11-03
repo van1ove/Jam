@@ -15,3 +15,4 @@ MonoBehaviour:
   itemId: carpet
   levelSprite: {fileID: 21300000, guid: 206e39ee7e5ec26438e2f1b1af53e243, type: 3}
   inventorySprite: {fileID: 21300000, guid: c1878ce995e5b5c40a734a044b7e7d18, type: 3}
+  lavaSprite: {fileID: 21300000, guid: 876831af1184d134d93460022ef015c3, type: 3}
