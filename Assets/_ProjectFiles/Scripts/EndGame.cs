@@ -28,7 +28,6 @@ public class EndGame : MonoBehaviour
     private void EndTime()
     {
         UnSubscribe();
-
         LoseScreen.SetActive(true);
     }
 
@@ -41,4 +40,5 @@ public class EndGame : MonoBehaviour
     {
         UnSubscribe();
     }
+
 }
