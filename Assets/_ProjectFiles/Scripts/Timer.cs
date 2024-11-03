@@ -35,6 +35,7 @@ public class Timer : MonoBehaviour
     private void EndTime()
     {
         StopCoroutine(TimerWork());
+        GameManager.onTimeOver?.Invoke();
         Debug.Log("EndTime logic");
     }
 }
