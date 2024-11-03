@@ -4,7 +4,7 @@ using UnityEngine.Rendering.Universal;
 public class GlobalLightManager : MonoBehaviour
 {
 	[SerializeField] private Light2D globalLight;
-
+	[SerializeField] private GameObject timer;
 	private const float lightOffDelay = 5f;
 
 	private float decreaseRate;
@@ -37,6 +37,7 @@ public class GlobalLightManager : MonoBehaviour
 	}
 	private void StartLightOffTimer()
 	{
+		timer.SetActive(true);
 		targetValue = 0f;
 	}
 }
