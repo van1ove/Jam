@@ -14,7 +14,7 @@ public class LavaItem : MonoBehaviour
 
     public void Initialize(LevelItemInfo levelItemInfo)
     {
-        spriteRenderer.sprite = levelItemInfo.LevelSprite;
+        spriteRenderer.sprite = levelItemInfo.LavaSprite;
         var trigger = gameObject.AddComponent<PolygonCollider2D>();
         trigger.isTrigger = true;
     }
