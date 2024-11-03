@@ -14,6 +14,7 @@ namespace _ProjectFiles.Core.Video
         {
             _videoPlayer = GetComponent<VideoPlayer>();
             _videoPlayer.Prepare();
+            _videoPlayer.loopPointReached += TurnOffVideo;
             _soundService = ServiceLocator.GetService<SoundService>();
             UpdateVolume(_soundService.Volume);
             _soundService.OnValueUpdated += UpdateVolume;
@@ -33,5 +34,7 @@ namespace _ProjectFiles.Core.Video
         }
         
         private void UpdateVolume(float value) => _videoPlayer.SetDirectAudioVolume(0, value);
+
+        private void TurnOffVideo(VideoPlayer player) => gameObject.SetActive(false);
     }
 }
