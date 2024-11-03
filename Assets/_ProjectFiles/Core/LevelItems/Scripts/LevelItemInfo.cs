@@ -7,8 +7,10 @@ public class LevelItemInfo : ScriptableObject
     [SerializeField] private string itemId;
     [SerializeField] private Sprite levelSprite;
     [SerializeField] private Sprite inventorySprite;
+    [SerializeField] private Sprite lavaSprite;
     
     public string ItemId => itemId;
     public Sprite LevelSprite => levelSprite;
     public Sprite InventorySprite => inventorySprite;
+    public Sprite LavaSprite => lavaSprite;
 }
