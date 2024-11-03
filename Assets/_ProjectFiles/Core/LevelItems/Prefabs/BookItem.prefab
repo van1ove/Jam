@@ -127,15 +127,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4082872531844231137, guid: a976a18e7286a404d91d82498b109b58, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.35
+      value: 1.8000001
       objectReference: {fileID: 0}
     - target: {fileID: 4082872531844231137, guid: a976a18e7286a404d91d82498b109b58, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.35
+      value: 1.8000001
       objectReference: {fileID: 0}
     - target: {fileID: 4082872531844231137, guid: a976a18e7286a404d91d82498b109b58, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.35
+      value: 1.8000001
       objectReference: {fileID: 0}
     - target: {fileID: 4082872531844231137, guid: a976a18e7286a404d91d82498b109b58, type: 3}
       propertyPath: m_LocalPosition.x
@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17c09a29ee1c724dbf3cd332b097227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectScale: 1.8
   playDuration: 0
   stopDuration: 0.5
   parentSystem: {fileID: 1710137966111753560}
