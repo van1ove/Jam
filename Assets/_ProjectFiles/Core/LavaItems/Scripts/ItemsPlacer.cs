@@ -1,4 +1,6 @@
-public class ItemsPlacer
+using UnityEngine;
+
+public class ItemsPlacer : MonoBehaviour
 {
     
 }
