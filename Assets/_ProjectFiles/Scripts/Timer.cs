@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     private void Start()
     {
         StartCoroutine(TimerWork());
+        GameManager.onPlayerDied += StopCorutine;
+        GameManager.onPlayerWin += StopCorutine;
     }
 
     IEnumerator TimerWork()
@@ -29,6 +31,7 @@ public class Timer : MonoBehaviour
                 IsTimerStopped = true;
             }
         }
+        yield return new WaitForSeconds(2);
         EndTime();
     }
 
@@ -37,5 +40,12 @@ public class Timer : MonoBehaviour
         StopCoroutine(TimerWork());
         GameManager.onTimeOver?.Invoke();
         Debug.Log("EndTime logic");
+    }
+
+    private void StopCorutine()
+    {
+        GameManager.onPlayerDied -= StopCorutine;
+        GameManager.onPlayerWin -= StopCorutine;
+        StopCoroutine(TimerWork());
     }
 }
