@@ -23,8 +23,6 @@ public class CharacterRenderer : MonoBehaviour
             var direction = characterMovement.Velocity.x > 0 ? 1 : -1;
             _currentScale.x = direction;
             transform.localScale = _currentScale;
-            
-            Debug.Log(direction);
         }
     }
 }

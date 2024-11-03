@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,6 +16,8 @@ public class UIInventoryItemView : MonoBehaviour, IPointerDownHandler, IPointerU
     private Vector2 _dragDelta;
     private PointerEventData _eventData;
     private Image _itemImage;
+
+    public Action<Vector2> OnItemPlaced { get; set; }
     
     public void Update()
     {
@@ -61,11 +64,12 @@ public class UIInventoryItemView : MonoBehaviour, IPointerDownHandler, IPointerU
         if (_eventData == null) return;
 
         _eventData = null;
-        PlaceItem();
+        var placePosition = Camera.main.ScreenToWorldPoint(eventData.position);
+        OnItemPlaced?.Invoke(placePosition);
         _isBeingDragged = false;
     }
 
-    private void PlaceItem()
+    public void ReturnItem()
     {
         transform.DOLocalMove(Vector3.zero, returnDuration);
     }

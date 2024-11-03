@@ -159,6 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 5928058161107041467}
   inventoryItemView: {fileID: 8716983663085793382}
+  lavaItemPrefab: {fileID: 100463840108868030, guid: 20e41c3b5680da7428ab4626c62bafbe, type: 3}
 --- !u!222 &1574404742868029751
 CanvasRenderer:
   m_ObjectHideFlags: 0
