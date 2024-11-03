@@ -49,6 +49,7 @@ public class UIInventoryItemView : MonoBehaviour, IPointerDownHandler, IPointerU
     
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (!_dragEnabled) return;
         _eventData = eventData;
         
         _dragDelta = eventData.position - (Vector2)transform.position;
