@@ -1,7 +1,7 @@
 using _ProjectFiles.Core.Infrastructure.ServiceLocator.Services;
 using UnityEngine;
 
-namespace _ProjectFiles.Core.Infrastructure
+namespace _ProjectFiles.Core.Infrastructure.ServiceLocator
 {
     public class ServiceLocatorBootstrap : MonoBehaviour
     {
@@ -13,7 +13,7 @@ namespace _ProjectFiles.Core.Infrastructure
         private void InitService<T>() where T : IService, new()
         {
             T obj = new T();
-            ServiceLocator.ServiceLocator.RegisterService<T>(obj);
+            ServiceLocator.RegisterService<T>(obj);
         }
     }
 }
