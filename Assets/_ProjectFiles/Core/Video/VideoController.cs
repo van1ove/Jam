@@ -2,6 +2,7 @@ using _ProjectFiles.Core.Infrastructure.ServiceLocator;
 using _ProjectFiles.Core.Infrastructure.ServiceLocator.Services;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 namespace _ProjectFiles.Core.Video
 {
@@ -35,6 +36,10 @@ namespace _ProjectFiles.Core.Video
         
         private void UpdateVolume(float value) => _videoPlayer.SetDirectAudioVolume(0, value);
 
-        private void TurnOffVideo(VideoPlayer player) => gameObject.SetActive(false);
+        private void TurnOffVideo(VideoPlayer player)
+        {
+            gameObject.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

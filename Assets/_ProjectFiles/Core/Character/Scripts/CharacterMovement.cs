@@ -104,9 +104,6 @@ public class CharacterMovement : MonoBehaviour
 
 	private void StopWalkingSound()
 	{
-		if (!soundsManager.IsPlaying())
-		{
-			soundsManager.StopClip();
-		}
+		soundsManager.StopClip();
 	}
 }

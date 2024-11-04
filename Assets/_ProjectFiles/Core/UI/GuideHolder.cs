@@ -8,6 +8,8 @@ namespace _ProjectFiles.Core.UI
         private int _currentIndex;
         private void Start()
         {
+            
+
             _currentIndex = 0;
             foreach (var step in guideSteps)
             {

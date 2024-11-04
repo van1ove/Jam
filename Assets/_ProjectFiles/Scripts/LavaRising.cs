@@ -9,7 +9,6 @@ public class LavaRising : MonoBehaviour
 
 	private void Awake()
 	{
-		DontDestroyOnLoad(this);
 		GameManager.onTimeOver += OnTimeOver;
 	}
 
@@ -37,6 +36,10 @@ public class LavaRising : MonoBehaviour
 		color.a = 1f;
 		spriteRenderer.color = color;
 
+		GameManager.onTimeOver -= OnTimeOver;
+	}
+	private void OnDestroy()
+	{
 		GameManager.onTimeOver -= OnTimeOver;
 	}
 }

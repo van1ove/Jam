@@ -371,50 +371,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1906197073
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1906197075}
-  - component: {fileID: 1906197074}
-  m_Layer: 0
-  m_Name: tempSceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1906197074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906197073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd283f5a470d8549a853d4f81d9140a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1906197075
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906197073}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 4.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!328 &1982315792 stripped
 VideoPlayer:
   m_CorrespondingSourceObject: {fileID: 4538569756502902485, guid: c72e71aabcfcf7047b1cc30cc5a60cdf, type: 3}
@@ -528,6 +484,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2178893386690297833, guid: a6e25367c9d6b0241a18b05759a36cd1, type: 3}
+      propertyPath: videoPlayer
+      value: 
+      objectReference: {fileID: 1982315792}
     - target: {fileID: 2590696811707502464, guid: a6e25367c9d6b0241a18b05759a36cd1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -558,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 9a1adfdab23715c43801651eae4eb98f, type: 3}
     - target: {fileID: 3683693175083321621, guid: a6e25367c9d6b0241a18b05759a36cd1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3683693175083321621, guid: a6e25367c9d6b0241a18b05759a36cd1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -583,14 +543,14 @@ PrefabInstance:
     - target: {fileID: 3683693175083321621, guid: a6e25367c9d6b0241a18b05759a36cd1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1906197074}
+      objectReference: {fileID: 0}
     - target: {fileID: 3683693175083321621, guid: a6e25367c9d6b0241a18b05759a36cd1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3683693175083321621, guid: a6e25367c9d6b0241a18b05759a36cd1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3683693175083321621, guid: a6e25367c9d6b0241a18b05759a36cd1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
@@ -831,6 +791,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4538569756502902485, guid: c72e71aabcfcf7047b1cc30cc5a60cdf, type: 3}
+      propertyPath: m_Looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538569756502902485, guid: c72e71aabcfcf7047b1cc30cc5a60cdf, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 5b130c8a5589d0a4c9e99e90cdc2d996, type: 3}
+    - target: {fileID: 4538569756502902485, guid: c72e71aabcfcf7047b1cc30cc5a60cdf, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -860,4 +828,3 @@ SceneRoots:
   - {fileID: 1144450871}
   - {fileID: 4501326331230272905}
   - {fileID: 1966027497722001924}
-  - {fileID: 1906197075}

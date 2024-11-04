@@ -6,6 +6,7 @@ public class SoundsManager : MonoBehaviour
 {
 	[SerializeField] private AudioSource audioSource;
 	[SerializeField] private AudioClip[] clips;
+	[SerializeField] private string lastClipsName;
 
 	public static SoundsManager Instance { get; private set; }
 
@@ -31,6 +32,7 @@ public class SoundsManager : MonoBehaviour
 			if (clipName == clip.name)
 			{
 				audioSource.PlayOneShot(clip);
+				lastClipsName = clip.name;
 			}
 		}
 	}
@@ -41,7 +43,7 @@ public class SoundsManager : MonoBehaviour
 
 	public void StopClip()
 	{
-		if (audioSource.isPlaying)
+		if (audioSource.isPlaying && lastClipsName == "walking-squidward")
 		{
 			audioSource.Stop();
 		}
