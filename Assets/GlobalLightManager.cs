@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -5,39 +6,24 @@ public class GlobalLightManager : MonoBehaviour
 {
 	[SerializeField] private Light2D globalLight;
 	[SerializeField] private GameObject timer;
-	private const float lightOffDelay = 5f;
 
-	private float decreaseRate;
-	private float targetValue;
-
-	private void Awake()
+	public void StartFade(float fadeTime)
 	{
-		decreaseRate = 0.3f;
-		targetValue = 1f;
-
-		Invoke(nameof(StartLightOffTimer), 5f);
+		StartCoroutine(FadeRoutine(fadeTime));
 	}
 
-	private void Update()
+	private IEnumerator FadeRoutine(float fadeTime)
 	{
-		if (globalLight.intensity > targetValue)
+		float elapsed = 0;
+		
+		while (elapsed < fadeTime)
 		{
-			globalLight.intensity -= decreaseRate * Time.deltaTime;
-
-			if (globalLight.intensity < targetValue)
-			{
-				globalLight.intensity = targetValue;
-			}
+			elapsed += Time.deltaTime;
+			globalLight.intensity = 1 - elapsed / fadeTime;
+			yield return null;
 		}
-		else if (targetValue <= 0)
-		{
-			this.enabled = false;
-			globalLight.enabled = false;
-		}
-	}
-	private void StartLightOffTimer()
-	{
-		timer.SetActive(true);
-		targetValue = 0f;
+		
+		enabled = false;
+		globalLight.enabled = false;
 	}
 }

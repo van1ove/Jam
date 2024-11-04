@@ -616,6 +616,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6344892025469161431, guid: 62aff97d2f8048849975ebf21b9885b0, type: 3}
+      propertyPath: m_Name
+      value: Pause Content
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471253362169502908, guid: 62aff97d2f8048849975ebf21b9885b0, type: 3}
+      propertyPath: m_Name
+      value: Pause Content
+      objectReference: {fileID: 0}
     - target: {fileID: 8000937261226931796, guid: 62aff97d2f8048849975ebf21b9885b0, type: 3}
       propertyPath: m_Name
       value: Pause Canvas
@@ -624,8 +632,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8303953432763115672, guid: 62aff97d2f8048849975ebf21b9885b0, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2918174565847635521, guid: 62aff97d2f8048849975ebf21b9885b0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62aff97d2f8048849975ebf21b9885b0, type: 3}

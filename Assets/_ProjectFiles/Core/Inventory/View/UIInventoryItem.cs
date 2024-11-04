@@ -11,6 +11,12 @@ public class UIInventoryItem : MonoBehaviour
     public UIInventoryItemView View => inventoryItemView;
     public Action ItemPlaced { get; set; }
 
+    public bool Interactable
+    {
+        get => View.Interactable;
+        set => View.Interactable = value;
+    }
+    
     private void Start()
     {
         View.OnItemPlaced += OnItemPlaced;
@@ -25,8 +31,6 @@ public class UIInventoryItem : MonoBehaviour
 
     private void OnItemPlaced(Vector2 placePosition)
     {
-        
-        
         var lavaItem = Instantiate(lavaItemPrefab, placePosition, Quaternion.identity, null);
         lavaItem.Initialize(_levelItemInfo);
         ItemPlaced?.Invoke();
