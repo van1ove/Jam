@@ -5,10 +5,16 @@ public class CharacterRenderer : MonoBehaviour
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
     [SerializeField] private CharacterMovement characterMovement;
     [SerializeField] private Animator animator;
+
+    [Header("Lights")] [SerializeField] private bool lightEnabled = true;
+    [SerializeField] private GameObject light;
+    [SerializeField] private GameObject candle;
     private Vector3 _currentScale;
     
     private void Start()
     {
+        light.SetActive(lightEnabled);
+        candle.SetActive(lightEnabled);
         _currentScale = transform.localScale;
     }
     

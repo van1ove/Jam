@@ -8,7 +8,6 @@ public class GameEntryPoint : MonoBehaviour
     [SerializeField] private CharacterContainer characterContainer;
     [SerializeField] private GameStartScript gameStartScript;
     
-
     private void Start()
     {
         var inventory = new Inventory(itemInfos);
