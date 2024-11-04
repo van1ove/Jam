@@ -6,7 +6,7 @@ public class CharacterBehaviour : MonoBehaviour
 {
     [SerializeField] private bool isEnabled;
     private List<Collider2D> _currentTriggers;
-    public Action OnCharacterDeath { get; set; }
+    public Action<bool> OnCharacterDeath { get; set; }
     
     private bool _isDead;
     private void Start()
@@ -22,7 +22,8 @@ public class CharacterBehaviour : MonoBehaviour
         if (_currentTriggers.Count == 0)
         {
             _isDead = true;
-            OnCharacterDeath?.Invoke(); // lava
+            OnCharacterDeath?.Invoke(true);
+            Debug.Log("!");
         }
     }
     
@@ -34,7 +35,7 @@ public class CharacterBehaviour : MonoBehaviour
         {
             if (stone.IsDamaging)
             {
-                OnCharacterDeath?.Invoke(); //other
+                OnCharacterDeath?.Invoke(false);
                 _isDead = true;
             }
         }

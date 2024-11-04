@@ -16,10 +16,10 @@ public class CharacterContainer : MonoBehaviour
         soundsManager = SoundsManager.Instance;
     }
 
-    private void OnCharacterDeath()
+    private void OnCharacterDeath(bool isDeathFromLava)
     {
         characterMovement.Enabled = false;
-        characterRenderer.OnDeath();
+        characterRenderer.OnDeath(isDeathFromLava);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -3,7 +3,7 @@ using UnityEngine;
 public class CharacterRenderer : MonoBehaviour
 {
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
-    private static readonly int Death = Animator.StringToHash("Death");
+    private static readonly int Death = Animator.StringToHash("DeathOption");
     [SerializeField] private CharacterMovement characterMovement;
     [SerializeField] private Animator animator;
 
@@ -33,8 +33,18 @@ public class CharacterRenderer : MonoBehaviour
         }
     }
 
-    public void OnDeath()
+    public void OnDeath(bool isDeathFromLava)
     {
-        animator.SetTrigger(Death);
+        characterMovement.enabled = false;
+
+        if (isDeathFromLava)
+        {
+            animator.SetInteger(Death, 0);        
+		}
+        else
+        {
+            int randomNumber = Random.Range(1, 3);
+            animator.SetInteger(Death, 1);
+		}
     }
 }

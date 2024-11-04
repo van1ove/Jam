@@ -31,7 +31,6 @@ public class SoundsManager : MonoBehaviour
 			if (clipName == clip.name)
 			{
 				audioSource.PlayOneShot(clip);
-				Debug.Log("|"+clip.name + "|");
 			}
 		}
 	}
