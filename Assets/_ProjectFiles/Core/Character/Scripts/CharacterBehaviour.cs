@@ -8,6 +8,7 @@ public class CharacterBehaviour : MonoBehaviour
     private List<Collider2D> _currentTriggers;
     public Action<bool> OnCharacterDeath { get; set; }
     public Action OnCharacterDeathAnimationEnd { get; set; }
+    public Action OnCharacterWin { get; set; }
     
     private bool _isDead;
     private void Start()
@@ -22,9 +23,9 @@ public class CharacterBehaviour : MonoBehaviour
         
         if (_currentTriggers.Count == 0)
         {
+            Debug.Log("trigger 0");
             _isDead = true;
             OnCharacterDeath?.Invoke(true);
-            Debug.Log("!");
         }
     }
     
@@ -39,6 +40,11 @@ public class CharacterBehaviour : MonoBehaviour
                 OnCharacterDeath?.Invoke(false);
                 _isDead = true;
             }
+        }
+
+        if (other.TryGetComponent(out WinTrigger trigger))
+        {
+            OnCharacterWin?.Invoke();
         }
     }
 
