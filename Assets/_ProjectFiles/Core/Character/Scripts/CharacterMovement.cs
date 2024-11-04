@@ -12,7 +12,21 @@ public class CharacterMovement : MonoBehaviour
 	private float _slipSpeed;
 	private float _remainingSlipSpeed;
 	private Vector2 _lastDirection;
-	public bool Enabled { get; set; } = false;
+
+	public bool Enabled
+	{
+		get => _enabled;
+		set
+		{
+			_enabled = value;
+			if (!_enabled)
+			{
+				rigidbody.velocity = Vector2.zero;
+			}
+		}
+	}
+
+	private bool _enabled;
 	
 	public Vector2 Velocity => rigidbody.velocity + _lastDirection * _remainingSlipSpeed;
 

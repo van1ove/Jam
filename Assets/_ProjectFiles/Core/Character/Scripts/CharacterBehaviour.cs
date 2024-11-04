@@ -7,6 +7,7 @@ public class CharacterBehaviour : MonoBehaviour
     [SerializeField] private bool isEnabled;
     private List<Collider2D> _currentTriggers;
     public Action<bool> OnCharacterDeath { get; set; }
+    public Action OnCharacterDeathAnimationEnd { get; set; }
     
     private bool _isDead;
     private void Start()
@@ -39,6 +40,11 @@ public class CharacterBehaviour : MonoBehaviour
                 _isDead = true;
             }
         }
+    }
+
+    public void OnDeathAnimationEnd()
+    {
+        OnCharacterDeathAnimationEnd?.Invoke();
     }
 
     private void OnTriggerExit2D(Collider2D other)
