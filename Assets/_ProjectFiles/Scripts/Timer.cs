@@ -6,6 +6,8 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private float fullTime;
     [SerializeField] private Slider slider;
+    [SerializeField] private bool takeItemLvl;
+    [SerializeField] private int delayStart;
     private float remainingTime = 0;
     private float sliderValue = 0;
     private bool isTimerStopped = false;
@@ -21,6 +23,11 @@ public class Timer : MonoBehaviour
 
     IEnumerator TimerWork()
     {
+        if(delayStart>0)
+        {
+            yield return new WaitForSeconds(delayStart);
+            delayStart = 0;
+        }
        // remainingTime = 0;
        // slider.value = 0;
         while (!isTimerStopped)
@@ -34,8 +41,16 @@ public class Timer : MonoBehaviour
                 isTimerStopped = true;
             }
         }
-        yield return new WaitForSeconds(2);
-        EndTime();
+        if(takeItemLvl)
+        {
+            GameManager.onTeleportPlayer?.Invoke();
+        } 
+        else
+        {
+            //yield return new WaitForSeconds(2);
+            EndTime();
+        }
+       
     }
     private IEnumerator UpdateSliderValue(float startValue, float targetValue)
     {
