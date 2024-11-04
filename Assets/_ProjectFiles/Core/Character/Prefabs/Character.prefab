@@ -291,7 +291,7 @@ MonoBehaviour:
   - {x: 0.16190666, y: -0.835, z: 0}
   m_ShapePathHash: -1135527003
   m_Mesh: {fileID: 0}
-  m_InstanceId: 261452
+  m_InstanceId: 269922
   m_LocalBounds:
     m_Center: {x: 0.005248964, y: -0.036742866, z: 0}
     m_Extent: {x: 0.36136776, y: 0.7982571, z: 0}
@@ -324,8 +324,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8465814274813511639}
   - {fileID: 5825044046395513964}
@@ -457,6 +457,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 15f9741ef6c6bd042b7362ee29f04451, type: 3}
   - {fileID: 8300000, guid: 5ce4ad9dcba7e01428cabee49ed26e77, type: 3}
   - {fileID: 8300000, guid: d00600f8b5e9cd744bcdc9ba120df6e2, type: 3}
+  lastClipsName: 
 --- !u!1001 &2294238128697494794
 PrefabInstance:
   m_ObjectHideFlags: 0

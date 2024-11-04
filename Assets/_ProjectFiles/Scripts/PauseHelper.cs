@@ -8,7 +8,8 @@ public class PauseHelper : MonoBehaviour
     [SerializeField] private string pauseButton = "Escape";
     private void Start()
     {
-        GameManager.onContinueGame +=continueGame;
+        GameManager.onContinueGame += continueGame;
+        pauseCanvas.SetActive(false);
     }
     private void Update()
     {

@@ -21,9 +21,11 @@ public class CharacterRenderer : MonoBehaviour
 		_currentScale = transform.localScale;
 
 		GameManager.onTimeOver += DeathByTimeOver;
+		GameManager.onPause += Pause;
+		GameManager.onContinueGame += Continue;
 	}
 
-	private void Update()
+	private void FixedUpdate()
 	{
 		bool isMoving = characterMovement.Velocity.magnitude > 0;
 		bool isOtherIdle = animator.GetBool(IsOtherIdle);
@@ -62,6 +64,15 @@ public class CharacterRenderer : MonoBehaviour
 			int randomNumber = Random.Range(1, 3);
 			animator.SetInteger(Death, randomNumber);
 		}
+	}
+	private void Continue()
+	{
+		characterMovement.Enabled = true;
+	}
+
+	private void Pause()
+	{
+		characterMovement.Enabled = false;
 	}
 	private void OnDisable()
 	{

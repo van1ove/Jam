@@ -5,7 +5,8 @@ namespace _ProjectFiles.Core.UI
     public class GuideHolder : MonoBehaviour
     {
         [SerializeField] private GameObject[] guideSteps;
-        private int _currentIndex;
+		[SerializeField] private GameStartScript gameStartScript;
+		private int _currentIndex;
         private void Start()
         {
             
@@ -25,6 +26,7 @@ namespace _ProjectFiles.Core.UI
             if (_currentIndex == guideSteps.Length)
             {
                 gameObject.SetActive(false);
+                gameStartScript.StartGame();
                 return;
             }
         

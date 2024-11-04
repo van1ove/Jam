@@ -11,7 +11,6 @@ public class Timer : MonoBehaviour
     private float remainingTime = 0;
     private float sliderValue = 0;
     private bool isTimerStopped = false;
-    private bool isPaused = false;
 
     private void Start()
     {
@@ -19,6 +18,7 @@ public class Timer : MonoBehaviour
         GameManager.onPlayerDied += StopCorutine;
         GameManager.onPlayerWin += StopCorutine;
         GameManager.onPause += PauseCorotine;
+        GameManager.onContinueGame += ContinueCorotine;
     }
 
     IEnumerator TimerWork()
@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour
             remainingTime++;
             sliderValue = remainingTime / fullTime;
 
-            yield return StartCoroutine(UpdateSliderValue(slider.value, remainingTime / fullTime));
+            yield return StartCoroutine(UpdateSliderValue(slider.value, sliderValue));
 
             if (remainingTime >= fullTime)
             {
@@ -82,14 +82,10 @@ public class Timer : MonoBehaviour
 
     private void PauseCorotine()
     {
-        isPaused = !isPaused;
-        if(isPaused)
-        {
-            StopAllCoroutines();
-        }
-        else
-        {
-            StartCoroutine(TimerWork());
-        }
+        StopAllCoroutines();
+    }
+    private void ContinueCorotine()
+    {
+        StartCoroutine(TimerWork());
     }
 }

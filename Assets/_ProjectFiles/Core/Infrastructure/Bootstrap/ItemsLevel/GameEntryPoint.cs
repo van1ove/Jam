@@ -6,7 +6,7 @@ public class GameEntryPoint : MonoBehaviour
     [SerializeField] private UIInventory inventoryView;
     [SerializeField] private List<LevelItemInfo> itemInfos;
     [SerializeField] private CharacterContainer characterContainer;
-    [SerializeField] private GameStartScript gameStartScript;
+    //[SerializeField] private GameStartScript gameStartScript;
     
     private void Start()
     {
@@ -15,6 +15,6 @@ public class GameEntryPoint : MonoBehaviour
         characterContainer.Initialize(inventory);
         inventoryView.Initialize(inventory);
         
-        gameStartScript.StartGame();
+        //gameStartScript.StartGame();
     }
 }
