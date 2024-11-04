@@ -19,12 +19,12 @@ public class EndTimeCharacterAnimation : MonoBehaviour
     private void EndTime()
     {
         _rigidbody2d.transform.position = new Vector3(14f, -7f, 0);
-        _userInput.enabled = false;
-        _characterMovement.enabled = false;
+        //_userInput.enabled = false;
+        Debug.Log("disabled");
+        _characterMovement.Enabled = false;
         _rigidbody2d.velocity = Vector3.right;
         GameManager.onTeleportPlayer -= EndTime;
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
