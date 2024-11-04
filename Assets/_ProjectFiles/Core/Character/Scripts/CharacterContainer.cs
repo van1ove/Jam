@@ -6,7 +6,7 @@ public class CharacterContainer : MonoBehaviour
     [SerializeField] private CharacterRenderer characterRenderer;
     [SerializeField] private CharacterBehaviour characterBehaviour;
     [SerializeField] private SoundsManager soundsManager;
-    private Inventory _inventory;
+    public Inventory _inventory { get; private set; }
     
     public void Initialize(Inventory inventory)
     {

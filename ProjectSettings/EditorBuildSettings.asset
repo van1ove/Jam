@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_ProjectFiles/Scenes/Dan2.unity
     guid: 3043f43372552b24e9f4f98d9edacde0
+  - enabled: 1
+    path: Assets/_ProjectFiles/Scenes/Dan.unity
+    guid: 9ff922545c1ebf14783aeb72d380e15f
+  - enabled: 1
+    path: Assets/_ProjectFiles/Scenes/Dan3.unity
+    guid: 9e9c4feb2c38a7b4f9cb78580d8fe6a5
   m_configObjects: {}
