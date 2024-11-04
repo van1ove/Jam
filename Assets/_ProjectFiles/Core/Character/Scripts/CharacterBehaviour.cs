@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CharacterBehaviour : MonoBehaviour
 {
+    [SerializeField] private bool isEnabled;
     private List<Collider2D> _currentTriggers;
 
     private void Start()
@@ -12,6 +13,8 @@ public class CharacterBehaviour : MonoBehaviour
 
     private void Update()
     {
+        if (!isEnabled) return;
+        
         if (_currentTriggers.Count == 0)
         {
             Debug.Log("Death");
