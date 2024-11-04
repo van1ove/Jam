@@ -8,6 +8,12 @@ public class UIInventorySlot : MonoBehaviour
     [SerializeField] private Transform itemContent;
     [SerializeField] private UIInventoryItem item;
     private InventorySlot _slot;
+
+    public bool Interactable
+    {
+        get => item.Interactable;
+        set => item.Interactable = value;
+    }
     
     public void Initialize(InventorySlot slot)
     {

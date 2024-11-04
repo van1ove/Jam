@@ -12,12 +12,18 @@ public class UIInventoryItemView : MonoBehaviour, IPointerDownHandler, IPointerU
     [SerializeField] private AnimationCurve scalePerDistance;
     
     private bool _dragEnabled;
-    private bool _isBeingDragged;
+    private bool _interactable;
     private Vector2 _dragDelta;
     private PointerEventData _eventData;
     private Image _itemImage;
 
     public Action<Vector2> OnItemPlaced { get; set; }
+
+    public bool Interactable
+    {
+        get => _interactable;
+        set => _interactable = value;
+    }
     
     public void Update()
     {
@@ -52,11 +58,11 @@ public class UIInventoryItemView : MonoBehaviour, IPointerDownHandler, IPointerU
     
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (!_interactable) return;
         if (!_dragEnabled) return;
         _eventData = eventData;
         
         _dragDelta = eventData.position - (Vector2)transform.position;
-        _isBeingDragged = true;
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -66,7 +72,6 @@ public class UIInventoryItemView : MonoBehaviour, IPointerDownHandler, IPointerU
         _eventData = null;
         var placePosition = Camera.main.ScreenToWorldPoint(eventData.position);
         OnItemPlaced?.Invoke(placePosition);
-        _isBeingDragged = false;
     }
 
     public void ReturnItem()

@@ -6,7 +6,8 @@ public class GameEntryPoint : MonoBehaviour
     [SerializeField] private UIInventory inventoryView;
     [SerializeField] private List<LevelItemInfo> itemInfos;
     [SerializeField] private CharacterContainer characterContainer;
-    [SerializeField] private ShowLevelCameraScript showLevelScript;
+    [SerializeField] private GameStartScript gameStartScript;
+    
 
     private void Start()
     {
@@ -15,12 +16,6 @@ public class GameEntryPoint : MonoBehaviour
         characterContainer.Initialize(inventory);
         inventoryView.Initialize(inventory);
         
-        showLevelScript.OnShowFinished += OnShowFinished;
-        showLevelScript.Show();
-    }
-
-    private void OnShowFinished()
-    {
-        Debug.Log("Finished");
+        gameStartScript.StartGame();
     }
 }
