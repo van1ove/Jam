@@ -35,15 +35,16 @@ public class SoundsManager : MonoBehaviour
 			}
 		}
 	}
-	public bool IsPlaying(string clipName)
+	public bool IsPlaying()
 	{
 		return audioSource.isPlaying;
 	}
 
-	public void StopClip(string clipName)
+	public void StopClip()
 	{
 		if (audioSource.isPlaying)
 		{
+			audioSource.Stop();
 		}
 	}
 }

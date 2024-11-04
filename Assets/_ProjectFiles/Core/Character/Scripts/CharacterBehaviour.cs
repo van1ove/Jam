@@ -22,7 +22,7 @@ public class CharacterBehaviour : MonoBehaviour
         if (_currentTriggers.Count == 0)
         {
             _isDead = true;
-            OnCharacterDeath?.Invoke();
+            OnCharacterDeath?.Invoke(); // lava
         }
     }
     
@@ -34,7 +34,7 @@ public class CharacterBehaviour : MonoBehaviour
         {
             if (stone.IsDamaging)
             {
-                OnCharacterDeath?.Invoke();
+                OnCharacterDeath?.Invoke(); //other
                 _isDead = true;
             }
         }

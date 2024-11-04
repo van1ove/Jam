@@ -12,16 +12,7 @@ public class CharacterMovement : MonoBehaviour
 	private float _slipSpeed;
 	private float _remainingSlipSpeed;
 	private Vector2 _lastDirection;
-	private bool _enabled;
-	public bool Enabled
-	{
-		get => _enabled;
-		set
-		{
-			_enabled = value;
-			rigidbody.velocity = Vector2.zero;
-		}
-	}
+	public bool Enabled { get; set; } = false;
 	
 	public Vector2 Velocity => rigidbody.velocity + _lastDirection * _remainingSlipSpeed;
 
@@ -61,6 +52,10 @@ public class CharacterMovement : MonoBehaviour
 
 			PlayWalkingSound();
 		}
+		else
+		{
+			StopWalkingSound();
+		}
 
 		rigidbody.velocity = (movement * movementSpeed) + (_lastDirection * _remainingSlipSpeed);
 
@@ -87,9 +82,17 @@ public class CharacterMovement : MonoBehaviour
 	}
 	private void PlayWalkingSound()
 	{
-		if (!soundsManager.IsPlaying("walking-squidward"))
+		if (!soundsManager.IsPlaying())
 		{
 			soundsManager.PlayClip("walking-squidward");
+		}
+	}
+
+	private void StopWalkingSound()
+	{
+		if (!soundsManager.IsPlaying())
+		{
+			soundsManager.StopClip();
 		}
 	}
 }
