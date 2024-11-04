@@ -340,10 +340,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timer
       objectReference: {fileID: 0}
-    - target: {fileID: 5492249596264054827, guid: f06188a24bac7de47933eadd852c808f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8322590099438017157, guid: f06188a24bac7de47933eadd852c808f, type: 3}
       propertyPath: slider
       value: 
@@ -351,10 +347,6 @@ PrefabInstance:
     - target: {fileID: 8322590099438017157, guid: f06188a24bac7de47933eadd852c808f, type: 3}
       propertyPath: fullTime
       value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322590099438017157, guid: f06188a24bac7de47933eadd852c808f, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
