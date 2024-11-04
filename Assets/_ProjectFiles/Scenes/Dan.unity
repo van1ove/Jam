@@ -2349,7 +2349,7 @@ PrefabInstance:
       objectReference: {fileID: 1138592312}
     - target: {fileID: 8322590099438017157, guid: f06188a24bac7de47933eadd852c808f, type: 3}
       propertyPath: fullTime
-      value: 3
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6957,6 +6957,14 @@ PrefabInstance:
     - target: {fileID: 5114149674794320324, guid: 2843a10761fb8aa4589749d8e2f31515, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437620565219780772, guid: 2843a10761fb8aa4589749d8e2f31515, type: 3}
+      propertyPath: m_Volume
+      value: 0.643
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969047475544170897, guid: 2843a10761fb8aa4589749d8e2f31515, type: 3}
+      propertyPath: m_Volume
+      value: 0.617
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
