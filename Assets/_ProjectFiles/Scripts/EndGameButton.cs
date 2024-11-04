@@ -3,20 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class EndGameButton : MonoBehaviour
 {
-    [SerializeField] private string sceneName1;
-    [SerializeField] private string sceneName2;
-    public void SwitchSceneButton1()
+    [SerializeField] private string sceneName;
+
+    public void SwitchSceneButton()
     {
-        if (sceneName1 != null)
+        if (sceneName != null)
         {
-            SceneManager.LoadScene(sceneName1);
-        }
-    }
-    public void SwitchSceneButton2()
-    {
-        if (sceneName2 != null)
-        {
-            SceneManager.LoadScene(sceneName2);
+            SceneManager.LoadScene(sceneName);
         }
     }
 }
