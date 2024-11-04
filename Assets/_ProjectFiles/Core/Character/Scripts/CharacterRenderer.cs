@@ -3,6 +3,7 @@ using UnityEngine;
 public class CharacterRenderer : MonoBehaviour
 {
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
+    private static readonly int Death = Animator.StringToHash("Death");
     [SerializeField] private CharacterMovement characterMovement;
     [SerializeField] private Animator animator;
 
@@ -17,7 +18,7 @@ public class CharacterRenderer : MonoBehaviour
         candle.SetActive(lightEnabled);
         _currentScale = transform.localScale;
     }
-    
+
     private void Update()
     {
         bool isMoving = characterMovement.Velocity.magnitude > 0;
@@ -30,5 +31,10 @@ public class CharacterRenderer : MonoBehaviour
             _currentScale.x = direction;
             transform.localScale = _currentScale;
         }
+    }
+
+    public void OnDeath()
+    {
+        animator.SetTrigger(Death);
     }
 }

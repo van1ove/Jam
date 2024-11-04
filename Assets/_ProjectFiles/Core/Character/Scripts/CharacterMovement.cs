@@ -18,6 +18,7 @@ public class CharacterMovement : MonoBehaviour
 	private void Update()
 	{
 		if (!Enabled) return;
+		
 		HandleMovement();
 	}
 	

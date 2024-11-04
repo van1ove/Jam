@@ -5,6 +5,7 @@ public class Inventory
 {
     private List<InventorySlot> _slots;
     public List<InventorySlot> Slots => _slots;
+    public bool IsEmpty => _slots.Any(x => x.ItemCount == 0);
     
     public Inventory(List<LevelItemInfo> itemsData)
     {

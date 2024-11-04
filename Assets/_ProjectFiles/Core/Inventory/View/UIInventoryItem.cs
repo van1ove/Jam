@@ -45,6 +45,7 @@ public class UIInventoryItem : MonoBehaviour
         
         if (hit.Length > 0)
         {
+            
             return true;
         }
         else
