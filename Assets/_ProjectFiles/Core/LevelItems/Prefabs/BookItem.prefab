@@ -101,6 +101,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2866319435477923056}
   itemInfo: {fileID: 11400000, guid: 6dd38c4a940860646bc051d733611bab, type: 2}
   pickUpEffect: {fileID: 17763564130135455, guid: 5009ce2430b5463408e8b40d3810a858, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1001 &1271261538792088494
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 3706193184751011306}
   - component: {fileID: 7969047475544170897}
   - component: {fileID: 299920074727656524}
+  - component: {fileID: 1045542743901378753}
   m_Layer: 5
   m_Name: WinScreen
   m_TagString: Untagged
@@ -191,7 +192,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: edf62bb90c5c01e45a181dd248f8fb7b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b85abe98e9917d94e8299511ddfc044e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -290,6 +291,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Menu
+--- !u!114 &1045542743901378753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561897366701324923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a269bac3e94cc6bc3bc5da1d18c437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4716425820385943578
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +316,7 @@ GameObject:
   - component: {fileID: 1500681887457572169}
   - component: {fileID: 5437620565219780772}
   - component: {fileID: 2031591033031035677}
+  - component: {fileID: 3790568552483270267}
   m_Layer: 5
   m_Name: LoseScreen
   m_TagString: Untagged
@@ -378,7 +392,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4246887b13be7494f9ad3fc156f4b306, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b50d8ea06922a8946b5fd359b27fddfe, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -477,6 +491,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Menu
+--- !u!114 &3790568552483270267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4716425820385943578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a269bac3e94cc6bc3bc5da1d18c437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6269892361049146242
 GameObject:
   m_ObjectHideFlags: 0
