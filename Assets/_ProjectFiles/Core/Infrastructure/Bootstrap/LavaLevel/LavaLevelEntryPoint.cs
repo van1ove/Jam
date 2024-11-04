@@ -10,6 +10,6 @@ public class LavaLevelEntryPoint : MonoBehaviour
     private void Start()
     {
         characterMovement.Enabled = true;
-        inventoryView.Initialize();
+        //inventoryView.Initialize();
     }
 }
