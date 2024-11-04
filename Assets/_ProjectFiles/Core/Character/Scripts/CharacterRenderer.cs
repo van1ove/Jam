@@ -19,6 +19,8 @@ public class CharacterRenderer : MonoBehaviour
 		light.SetActive(lightEnabled);
 		candle.SetActive(lightEnabled);
 		_currentScale = transform.localScale;
+
+		GameManager.onTimeOver += DeathByTimeOver;
 	}
 
 	private void Update()
@@ -42,10 +44,14 @@ public class CharacterRenderer : MonoBehaviour
 			animator.SetBool(IsOtherIdle, !isOtherIdle);
 		}
 	}
-
+	private void DeathByTimeOver()
+	{
+		OnDeath(false);
+	}
 	public void OnDeath(bool isDeathFromLava)
 	{
 		characterMovement.enabled = false;
+		GameManager.onPlayerDied?.Invoke();
 
 		if (isDeathFromLava)
 		{
@@ -56,5 +62,9 @@ public class CharacterRenderer : MonoBehaviour
 			int randomNumber = Random.Range(1, 3);
 			animator.SetInteger(Death, randomNumber);
 		}
+	}
+	private void OnDisable()
+	{
+		GameManager.onTimeOver -= DeathByTimeOver;
 	}
 }

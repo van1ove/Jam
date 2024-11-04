@@ -4,31 +4,38 @@ using UnityEngine;
 
 public class LavaRising : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer spriteRenderer; 
-    [SerializeField] private float fadeDuration = 2f;
+	[SerializeField] private SpriteRenderer spriteRenderer; 
+	[SerializeField] private float fadeDuration = 2f;
 
-    private void Start()
-    {
-        StartCoroutine(FadeInSprite());
-    }
+	private void Awake()
+	{
+		GameManager.onTimeOver += OnTimeOver;
+	}
 
-    private IEnumerator FadeInSprite()
-    {
-        Color color = spriteRenderer.color;
-        color.a = 0;
-        spriteRenderer.color = color;
+	private void OnTimeOver()
+	{
+		StartCoroutine(FadeInSprite());
+	}
 
-        float elapsedTime = 0f;
+	private IEnumerator FadeInSprite()
+	{
+		Color color = spriteRenderer.color;
+		color.a = 0;
+		spriteRenderer.color = color;
 
-        while (elapsedTime < fadeDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            color.a = Mathf.Clamp01(elapsedTime / fadeDuration);
-            spriteRenderer.color = color;
-            yield return null;
-        }
+		float elapsedTime = 0f;
 
-        color.a = 1f;
-        spriteRenderer.color = color;
-    }
+		while (elapsedTime < fadeDuration)
+		{
+			elapsedTime += Time.deltaTime;
+			color.a = Mathf.Clamp01(elapsedTime / fadeDuration);
+			spriteRenderer.color = color;
+			yield return null;
+		}
+
+		color.a = 1f;
+		spriteRenderer.color = color;
+
+		GameManager.onTimeOver -= OnTimeOver;
+	}
 }

@@ -28,18 +28,20 @@ public class Timer : MonoBehaviour
             yield return new WaitForSeconds(delayStart);
             delayStart = 0;
         }
-       // remainingTime = 0;
-       // slider.value = 0;
+
         while (!isTimerStopped)
         {
+            yield return new WaitForSeconds(1);
             remainingTime++;
             sliderValue = remainingTime / fullTime;
+
             yield return StartCoroutine(UpdateSliderValue(slider.value, remainingTime / fullTime));
-            yield return new WaitForSeconds(1);
+
             if (remainingTime >= fullTime)
             {
                 isTimerStopped = true;
             }
+
         }
         if(takeItemLvl)
         {
@@ -47,7 +49,6 @@ public class Timer : MonoBehaviour
         } 
         else
         {
-            //yield return new WaitForSeconds(2);
             EndTime();
         }
        
