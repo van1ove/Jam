@@ -33,7 +33,7 @@ public class EndTimeCharacterAnimation : MonoBehaviour
         {
             GameManager.CurrentInventory = _characterContainer._inventory;
             GameManager.onNextLvl?.Invoke();
-            SceneManager.LoadScene("Dan");
+           // SceneManager.LoadScene("Dan");
             Debug.Log("exit");
         }
     }
