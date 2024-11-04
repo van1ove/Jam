@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Flloor
   - Wall
+  - IceCube
+  - BurningStone
   layers:
   - Default
   - TransparentFX

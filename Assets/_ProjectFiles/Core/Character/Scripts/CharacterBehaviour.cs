@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,7 +6,9 @@ public class CharacterBehaviour : MonoBehaviour
 {
     [SerializeField] private bool isEnabled;
     private List<Collider2D> _currentTriggers;
-
+    public Action OnCharacterDeath { get; set; }
+    
+    private bool _isDead;
     private void Start()
     {
         _currentTriggers = new List<Collider2D>();
@@ -13,21 +16,28 @@ public class CharacterBehaviour : MonoBehaviour
 
     private void Update()
     {
+        if (_isDead) return;
         if (!isEnabled) return;
         
         if (_currentTriggers.Count == 0)
         {
-            Debug.Log("Death");
-        }
-        else
-        {
-            //Debug.Log($"Current tirggers count: {_currentTriggers.Count}");
+            _isDead = true;
+            OnCharacterDeath?.Invoke();
         }
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         _currentTriggers.Add(other);
+
+        if (other.TryGetComponent(out BurningStone stone))
+        {
+            if (stone.IsDamaging)
+            {
+                OnCharacterDeath?.Invoke();
+                _isDead = true;
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
