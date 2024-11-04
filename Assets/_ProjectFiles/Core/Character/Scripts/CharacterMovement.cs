@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -7,7 +8,7 @@ public class CharacterMovement : MonoBehaviour
 	[SerializeField] private float movementSpeed;
 	[SerializeField] private float slipDecayRate;
 	[SerializeField] private float slipSpeed;
-	private SoundsManager soundsManager;
+	[SerializeField] private SoundsManager soundsManager;
 	
 	private float _slipSpeed;
 	private float _remainingSlipSpeed;
@@ -31,6 +32,11 @@ public class CharacterMovement : MonoBehaviour
 	public Vector2 Velocity => rigidbody.velocity + _lastDirection * _remainingSlipSpeed;
 
 	private void Awake() => soundsManager = SoundsManager.Instance;
+
+	private void Start()
+	{
+		soundsManager = transform.parent.GetComponent<SoundsManager>();
+	}
 
 	private void Update()
 	{

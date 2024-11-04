@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EndGame : MonoBehaviour
 {
     [SerializeField] GameObject WinScreen;
     [SerializeField] GameObject LoseScreen;
+    [SerializeField] CharacterContainer characterContainer;
     void Start()
     {
         Subscribe();
