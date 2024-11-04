@@ -45,7 +45,7 @@ namespace _ProjectFiles.Core.Video
 			else
 			{
 				gameObject.SetActive(false);
-				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+				SceneManager.LoadScene(0);
 			}
 		}
 	}

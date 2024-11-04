@@ -77,7 +77,7 @@ public class Timer : MonoBehaviour
     {
         GameManager.onPlayerDied -= StopCorutine;
         GameManager.onPlayerWin -= StopCorutine;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         StopCoroutine(TimerWork());
     }
 

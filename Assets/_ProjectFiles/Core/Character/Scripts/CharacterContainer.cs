@@ -33,6 +33,11 @@ public class CharacterContainer : MonoBehaviour
         }
     }
 
+    public void OnDeathAnimationEnd()
+    {
+        GameManager.onPlayerDied?.Invoke();
+    }
+
     private void OnDestroy()
     {
         characterBehaviour.OnCharacterDeath -= OnCharacterDeath;

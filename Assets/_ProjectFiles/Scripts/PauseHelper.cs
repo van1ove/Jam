@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseHelper : MonoBehaviour
@@ -18,17 +16,18 @@ public class PauseHelper : MonoBehaviour
             if(pauseCanvas.activeInHierarchy == false)
             {
                 pauseCanvas.SetActive(true);
+                GameManager.onPause?.Invoke();
             }
             else
             {
                 pauseCanvas.SetActive(false);
+                GameManager.onContinueGame?.Invoke();
             }
-            GameManager.onPause?.Invoke();
         }
     }
     private void continueGame()
     {
         pauseCanvas.SetActive(false);
-        GameManager.onPause?.Invoke();
+        GameManager.onContinueGame?.Invoke();
     }
 }
