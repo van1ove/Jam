@@ -6,8 +6,8 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private float fullTime;
     [SerializeField] private Slider slider;
-    private float remaningTime;
-    private bool IsTimerStopped = false;
+    private float remainingTime;
+    private bool isTimerStopped = false;
 
     private void Start()
     {
@@ -18,28 +18,39 @@ public class Timer : MonoBehaviour
 
     IEnumerator TimerWork()
     {
-        remaningTime = 0;
+        remainingTime = 0;
         slider.value = 0;
-        while (IsTimerStopped==false) 
+        while (!isTimerStopped)
         {
-            remaningTime++;
-            slider.value = remaningTime / fullTime;
-            Debug.Log(remaningTime.ToString());
+            remainingTime++;
+            yield return StartCoroutine(UpdateSliderValue(slider.value, remainingTime / fullTime));
             yield return new WaitForSeconds(1);
-            if (remaningTime >= fullTime)
+            if (remainingTime >= fullTime)
             {
-                IsTimerStopped = true;
+                isTimerStopped = true;
             }
         }
         yield return new WaitForSeconds(2);
         EndTime();
+    }
+    private IEnumerator UpdateSliderValue(float startValue, float targetValue)
+    {
+        float elapsedTime = 0f;
+        float duration = 0.5f;
+
+        while (elapsedTime < duration)
+        {
+            slider.value = Mathf.Lerp(startValue, targetValue, (elapsedTime / duration));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        slider.value = targetValue;
     }
 
     private void EndTime()
     {
         StopCoroutine(TimerWork());
         GameManager.onTimeOver?.Invoke();
-        Debug.Log("EndTime logic");
     }
 
     private void StopCorutine()
