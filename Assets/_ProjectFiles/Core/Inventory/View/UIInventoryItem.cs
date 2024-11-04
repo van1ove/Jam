@@ -31,27 +31,50 @@ public class UIInventoryItem : MonoBehaviour
 
     private void OnItemPlaced(Vector2 placePosition)
     {
-        var lavaItem = Instantiate(lavaItemPrefab, placePosition, Quaternion.identity, null);
-        lavaItem.Initialize(_levelItemInfo);
+        if (_levelItemInfo.ItemId == "water")
+        {
+            bool hasRaycast = RaycastOnPlace(placePosition, out RaycastHit2D[] result);
+            if (!hasRaycast)
+            {
+                View.ReturnItem();
+                return;
+            }
+
+            bool hasBurningStone = false;
+            
+            
+            BurningStone stone = new BurningStone();
+            foreach (var raycastHit in result)
+            {
+                hasBurningStone = raycastHit.collider.TryGetComponent(out stone);
+                if(stone)
+                    hasBurningStone = stone.IsDamaging;
+            }
+
+            if (!hasBurningStone)
+            {
+                View.ReturnItem();
+                return;
+            }
+
+            stone.IsDamaging = false;
+        }
+        else
+        {
+            var lavaItem = Instantiate(lavaItemPrefab, placePosition, Quaternion.identity, null);
+            lavaItem.Initialize(_levelItemInfo);
+        }
         ItemPlaced?.Invoke();
         
         View.ReturnItem();
     }
 
-    private bool RaycastOnPlace(Vector2 placePosition, out RaycastHit[] result)
+    private bool RaycastOnPlace(Vector2 placePosition, out RaycastHit2D[] result)
     {
-        var hit = Physics.RaycastAll(placePosition, Vector3.forward);
+        var hit = Physics2D.RaycastAll(placePosition, Vector3.forward);
         result = hit;
         
-        if (hit.Length > 0)
-        {
-            
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return hit.Length > 0;
     }
 
     private void OnDestroy()

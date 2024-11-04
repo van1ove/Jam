@@ -371,11 +371,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4880790602834698135, guid: 2139feb80962b4c40bdfd7a0c6a1a77b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4880790602834698135, guid: 2139feb80962b4c40bdfd7a0c6a1a77b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4880790602834698135, guid: 2139feb80962b4c40bdfd7a0c6a1a77b, type: 3}
       propertyPath: m_AnchorMin.x
@@ -387,11 +387,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4880790602834698135, guid: 2139feb80962b4c40bdfd7a0c6a1a77b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1774
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4880790602834698135, guid: 2139feb80962b4c40bdfd7a0c6a1a77b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 998
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 4880790602834698135, guid: 2139feb80962b4c40bdfd7a0c6a1a77b, type: 3}
       propertyPath: m_LocalScale.x
@@ -435,11 +435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4880790602834698135, guid: 2139feb80962b4c40bdfd7a0c6a1a77b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 887
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4880790602834698135, guid: 2139feb80962b4c40bdfd7a0c6a1a77b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 499.00797
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 4880790602834698135, guid: 2139feb80962b4c40bdfd7a0c6a1a77b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4579,10 +4579,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -5183,6 +5183,7 @@ GameObject:
   - component: {fileID: 7916261004765701719}
   - component: {fileID: 2838085670430751558}
   - component: {fileID: 2353139902247005892}
+  - component: {fileID: 7916261004765701720}
   m_Layer: 0
   m_Name: BurningStove
   m_TagString: Untagged
@@ -5982,10 +5983,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -10788,6 +10789,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5497752267435646974}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &7916261004765701720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632710269512310152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7460fc8b0ad86044083f795da0d0e664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 2838085670430751558}
+  nonDamagingSprite: {fileID: 21300000, guid: d249113f7c5ff784a8c5632d3e7bb4b6, type: 3}
+  damagingSprite: {fileID: 21300000, guid: eb27804e11ea13d4bbf69b3d406a7d2e, type: 3}
+  isDamagingByDefault: 1
 --- !u!4 &7920009612420636123
 Transform:
   m_ObjectHideFlags: 0
