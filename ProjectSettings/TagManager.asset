@@ -8,7 +8,6 @@ TagManager:
   - Wall
   - IceCube
   - BurningStone
-  - Exit
   layers:
   - Default
   - TransparentFX
