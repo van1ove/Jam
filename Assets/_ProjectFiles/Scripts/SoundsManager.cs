@@ -6,16 +6,44 @@ public class SoundsManager : MonoBehaviour
 {
 	[SerializeField] private AudioSource audioSource;
 	[SerializeField] private AudioClip[] clips;
-	
+
+	public static SoundsManager Instance { get; private set; }
+
+	private void Awake()
+	{
+		if (Instance == null)
+		{
+			Instance = this;
+			DontDestroyOnLoad(gameObject);
+		}
+		else
+		{
+			Destroy(gameObject);
+		}
+	}
+
 	public void PlayClip(string clipName)
 	{
+		
+		audioSource.Stop();
 		foreach (AudioClip clip in clips)
 		{
 			if (clipName == clip.name)
 			{
 				audioSource.PlayOneShot(clip);
-				Debug.Log(clip.name);
+				Debug.Log("|"+clip.name + "|");
 			}
+		}
+	}
+	public bool IsPlaying(string clipName)
+	{
+		return audioSource.isPlaying;
+	}
+
+	public void StopClip(string clipName)
+	{
+		if (audioSource.isPlaying)
+		{
 		}
 	}
 }

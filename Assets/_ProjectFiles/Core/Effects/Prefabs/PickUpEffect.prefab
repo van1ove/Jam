@@ -4824,6 +4824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17c09a29ee1c724dbf3cd332b097227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectScale: 0
   playDuration: 1
   stopDuration: 0
   parentSystem: {fileID: 7657729404899593189}

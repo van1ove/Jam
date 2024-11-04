@@ -5,6 +5,7 @@ public class LavaItem : MonoBehaviour
 {
     [SerializeField] private ConfigurableEffect placeEffect;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    private SoundsManager soundsManager;
 
     private void Start()
     {
@@ -17,5 +18,16 @@ public class LavaItem : MonoBehaviour
         spriteRenderer.sprite = levelItemInfo.LavaSprite;
         var trigger = gameObject.AddComponent<PolygonCollider2D>();
         trigger.isTrigger = true;
+
+        soundsManager = SoundsManager.Instance;
+
+        if (levelItemInfo.ItemId == "ice" || levelItemInfo.ItemId == "water")
+        {
+            soundsManager.PlayClip("steam-hiss");
+        }
+        else 
+        {
+            soundsManager.PlayClip("drop-item-on-lava");
+		}
     }
 }

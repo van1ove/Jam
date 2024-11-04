@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
 	[SerializeField] private float movementSpeed;
 	[SerializeField] private float slipDecayRate;
 	[SerializeField] private float slipSpeed;
+	private SoundsManager soundsManager;
 	
 	private float _slipSpeed;
 	private float _remainingSlipSpeed;
@@ -14,6 +15,8 @@ public class CharacterMovement : MonoBehaviour
 	public bool Enabled { get; set; } = false;
 	
 	public Vector2 Velocity => rigidbody.velocity + _lastDirection * _remainingSlipSpeed;
+
+	private void Awake() => soundsManager = SoundsManager.Instance;
 
 	private void Update()
 	{
@@ -46,6 +49,8 @@ public class CharacterMovement : MonoBehaviour
 		{
 			_lastDirection = movement.normalized;
 			_remainingSlipSpeed += _slipSpeed * Time.deltaTime;
+
+			PlayWalkingSound();
 		}
 
 		rigidbody.velocity = (movement * movementSpeed) + (_lastDirection * _remainingSlipSpeed);
@@ -70,5 +75,12 @@ public class CharacterMovement : MonoBehaviour
 	{
 		_slipSpeed = 0;
 		_remainingSlipSpeed = 0;
+	}
+	private void PlayWalkingSound()
+	{
+		if (!soundsManager.IsPlaying("walking-squidward"))
+		{
+			soundsManager.PlayClip("walking-squidward");
+		}
 	}
 }

@@ -15,7 +15,7 @@ public class GameStartScript : MonoBehaviour
     {
         showLevelScript.OnShowFinished += OnShowFinished;
 
-        inventory.Interactable(false);
+        inventory.Interactable(true);
         characterMovement.Enabled = false;
         StartCoroutine(StartDelay());
     }
