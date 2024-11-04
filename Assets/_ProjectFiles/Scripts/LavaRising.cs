@@ -9,6 +9,7 @@ public class LavaRising : MonoBehaviour
 
 	private void Awake()
 	{
+		DontDestroyOnLoad(this);
 		GameManager.onTimeOver += OnTimeOver;
 	}
 
