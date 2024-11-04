@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46289e9e-1be0-4905-9817-c9ffe823e4e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Character/Scripts/CharacterContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Character/Scripts/CharacterContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Dan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Dan.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Dan3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Dan3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Scripts/EndTimeCharacterAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Scripts/EndTimeCharacterAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Prefabs/Menu/LastCutscene Canvas.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Prefabs/Menu/LastCutscene Canvas.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Scripts/LastCatSceneManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Scripts/LastCatSceneManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Video/катсцена 2.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Video/катсцена 2.mp4.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Video/VideoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Core/Video/VideoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Prefabs/Menu/Cutscene Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Prefabs/Menu/Cutscene Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ProjectFiles/Scenes/Menu.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Reverting in master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
