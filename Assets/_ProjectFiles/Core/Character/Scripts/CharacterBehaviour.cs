@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,14 +11,17 @@ public class CharacterBehaviour : MonoBehaviour
     public Action OnCharacterDeathAnimationEnd { get; set; }
     
     private bool _isDead;
+    private bool _isEnabled;
     private void Start()
     {
         _currentTriggers = new List<Collider2D>();
+		StartCoroutine(DelayRoutine());
     }
 
     private void Update()
     {
-        if (_isDead) return;
+        if (!_isEnabled) return;
+		if (_isDead) return;
         if (!isEnabled) return;
         
         if (_currentTriggers.Count == 0)
@@ -40,6 +44,13 @@ public class CharacterBehaviour : MonoBehaviour
             }
         }
     }
+
+	private IEnumerator DelayRoutine()
+	{
+		yield return new WaitForSeconds(0.5f);
+		_isEnabled = true;
+		
+	}
 
     public void OnDeathAnimationEnd()
     {
