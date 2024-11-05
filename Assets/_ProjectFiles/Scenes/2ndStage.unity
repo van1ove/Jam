@@ -1549,6 +1549,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3108765631219417643, guid: 8bf14ce022b69e74da403c5ca55feb60, type: 3}
   m_PrefabInstance: {fileID: 1545663880}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1545663883 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2962816163708424693, guid: 8bf14ce022b69e74da403c5ca55feb60, type: 3}
+  m_PrefabInstance: {fileID: 1545663880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1545663886 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5366198195740305380, guid: 8bf14ce022b69e74da403c5ca55feb60, type: 3}
@@ -1666,6 +1671,14 @@ PrefabInstance:
       propertyPath: sceneName
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 4099586453505798086, guid: 7488439e396f5b245bb92fa7bc78e889, type: 3}
+      propertyPath: levelSource
+      value: 
+      objectReference: {fileID: 1500536230}
+    - target: {fileID: 4099586453505798086, guid: 7488439e396f5b245bb92fa7bc78e889, type: 3}
+      propertyPath: playerSource
+      value: 
+      objectReference: {fileID: 1545663883}
     - target: {fileID: 5233477595312593645, guid: 7488439e396f5b245bb92fa7bc78e889, type: 3}
       propertyPath: m_Name
       value: LastCutscene Canvas
