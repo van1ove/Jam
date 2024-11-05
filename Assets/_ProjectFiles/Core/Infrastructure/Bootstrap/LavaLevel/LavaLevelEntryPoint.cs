@@ -8,11 +8,17 @@ public class LavaLevelEntryPoint : MonoBehaviour
     [SerializeField] private CharacterMovement characterMovement;
     [SerializeField] private CharacterContainer characterContainer;
 
-    private void Start()
+    private void Awake()
     {
         characterMovement.Enabled = true;
         inventoryView.Initialize(GameManager.CurrentInventory);
         characterContainer.Initialize(GameManager.CurrentInventory);
         inventoryView.Interactable(true);
+        
+        GameManager.onTimeOver = null;
+        GameManager.onContinueGame = null;
+        GameManager.onPause = null;
+        GameManager.onPlayerWin = null;
+        GameManager.onPlayerDied = null;
     }
 }

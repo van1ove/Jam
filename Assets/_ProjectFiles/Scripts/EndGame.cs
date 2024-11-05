@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EndGame : MonoBehaviour
@@ -40,4 +41,12 @@ public class EndGame : MonoBehaviour
         UnSubscribe();
     }
 
+    private void OnDestroy()
+    {
+        GameManager.onTimeOver = null;
+        GameManager.onContinueGame = null;
+        GameManager.onPause = null;
+        GameManager.onPlayerWin = null;
+        GameManager.onPlayerDied = null;
+    }
 }

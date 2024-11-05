@@ -738,6 +738,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cutscene Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7159303820213236456, guid: c72e71aabcfcf7047b1cc30cc5a60cdf, type: 3}
+      propertyPath: sceneName
+      value: 1stStage
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -4,30 +4,30 @@ public class PauseHelper : MonoBehaviour
 {
     [SerializeField] private GameObject pauseCanvas;
     [SerializeField] private string pauseButton = "Escape";
+    private bool isPaused;
+    
     private void Start()
     {
-        GameManager.onContinueGame += continueGame;
         pauseCanvas.SetActive(false);
     }
     private void Update()
     {
         if (Input.GetButtonDown(pauseButton) == true)
         {
-            if(pauseCanvas.activeInHierarchy == false)
+            Debug.Log("button is down");
+            isPaused = !isPaused;
+            
+            pauseCanvas.SetActive(isPaused);
+            Debug.Log(isPaused);
+            
+            if (isPaused)
             {
-                pauseCanvas.SetActive(true);
                 GameManager.onPause?.Invoke();
             }
             else
             {
-                pauseCanvas.SetActive(false);
-                GameManager.onContinueGame?.Invoke();
+                 GameManager.onContinueGame?.Invoke();
             }
         }
-    }
-    private void continueGame()
-    {
-        pauseCanvas.SetActive(false);
-        GameManager.onContinueGame?.Invoke();
     }
 }

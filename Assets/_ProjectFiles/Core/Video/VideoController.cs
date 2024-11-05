@@ -8,6 +8,7 @@ namespace _ProjectFiles.Core.Video
 {
 	public class VideoController : MonoBehaviour
 	{
+		[SerializeField] private string sceneName;
 		private VideoPlayer _videoPlayer;
 		private SoundService _soundService;
 
@@ -45,7 +46,7 @@ namespace _ProjectFiles.Core.Video
 			else
 			{
 				gameObject.SetActive(false);
-				SceneManager.LoadScene(0);
+				SceneManager.LoadScene(sceneName);
 			}
 		}
 	}

@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     private float remainingTime = 0;
     private float sliderValue = 0;
     private bool isTimerStopped = false;
+    private bool paused = false;
 
     private void Start()
     {
@@ -31,6 +32,8 @@ public class Timer : MonoBehaviour
 
         while (!isTimerStopped)
         {
+            if (paused) yield return null;
+            
             yield return new WaitForSeconds(1);
             remainingTime++;
             sliderValue = remainingTime / fullTime;
@@ -83,10 +86,12 @@ public class Timer : MonoBehaviour
 
     private void PauseCorotine()
     {
-        StopAllCoroutines();
+        paused = true;
+        //StopAllCoroutines();
     }
     private void ContinueCorotine()
     {
-        StartCoroutine(TimerWork());
+        paused = false;
+        //StartCoroutine(TimerWork());
     }
 }

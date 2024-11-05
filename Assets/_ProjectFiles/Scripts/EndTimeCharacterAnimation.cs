@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EndTimeCharacterAnimation : MonoBehaviour
 {
+    [SerializeField] private float animationSpeed;
     private UserInput _userInput;
     private CharacterMovement _characterMovement;
     private Rigidbody2D _rigidbody2d;
@@ -22,7 +21,7 @@ public class EndTimeCharacterAnimation : MonoBehaviour
     {
         _rigidbody2d.transform.position = new Vector3(14f, -7f, 0);
         _characterMovement.Enabled = false;
-        _rigidbody2d.velocity = Vector3.right;
+        _rigidbody2d.velocity = animationSpeed * Vector3.right;
         GameManager.onTeleportPlayer -= EndTime;
     }
 
@@ -32,7 +31,7 @@ public class EndTimeCharacterAnimation : MonoBehaviour
         {
             Destroy(_characterMovement.transform.parent.gameObject);
             GameManager.CurrentInventory = _characterContainer._inventory;
-            SceneManager.LoadScene("Dan");
+            SceneManager.LoadScene("2ndStage");
             
         }
     }

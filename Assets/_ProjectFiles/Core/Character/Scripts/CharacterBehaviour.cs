@@ -24,7 +24,6 @@ public class CharacterBehaviour : MonoBehaviour
         {
             _isDead = true;
             OnCharacterDeath?.Invoke(true);
-            Debug.Log("!");
         }
     }
     

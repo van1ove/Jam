@@ -52,7 +52,7 @@ public class CharacterRenderer : MonoBehaviour
 	}
 	public void OnDeath(bool isDeathFromLava)
 	{
-		characterMovement.enabled = false;
+		characterMovement.Enabled = false;
 
 		if (isDeathFromLava)
 		{
@@ -67,13 +67,11 @@ public class CharacterRenderer : MonoBehaviour
 	private void Continue()
 	{
 		characterMovement.Enabled = true;
-		Debug.Log("continue");
 	}
 
 	private void Pause()
 	{
 		characterMovement.Enabled = false;
-		Debug.Log("paused");
 	}
 	private void OnDisable()
 	{
