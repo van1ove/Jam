@@ -76,7 +76,7 @@ public class UIInventoryItem : MonoBehaviour
 
             if (_levelItemInfo.ItemId == "ice")
             {
-                Vector2 additionalPosition = new Vector2(placePosition.x + 1.25f, placePosition.y);
+                Vector2 additionalPosition = new Vector2(placePosition.x + 2.7f, placePosition.y);
                 Debug.Log(additionalPosition);
                 var lavaItem1 = Instantiate(lavaItemPrefab, additionalPosition, Quaternion.identity, null);
                 lavaItem1.Initialize(_levelItemInfo);

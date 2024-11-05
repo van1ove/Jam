@@ -10,7 +10,8 @@ public class EndGameButton : MonoBehaviour
     {
         if (sceneName1 != null)
         {
-            SceneManager.LoadScene(sceneName1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameManager.CurrentInventory = null;
         }
     }
     public void SwitchSceneButton2()

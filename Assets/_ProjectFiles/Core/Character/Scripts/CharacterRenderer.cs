@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterRenderer : MonoBehaviour
 {
@@ -11,11 +12,14 @@ public class CharacterRenderer : MonoBehaviour
 	[Header("Lights")] [SerializeField] private bool lightEnabled = true;
 	[SerializeField] private GameObject light;
 	[SerializeField] private GameObject candle;
+	private bool isFirstLevel;
 	private Vector3 _currentScale;
 	private bool _isIdleChanged;
 	
 	private void Start()
 	{
+		isFirstLevel = false;
+
 		light.SetActive(lightEnabled);
 		candle.SetActive(lightEnabled);
 		_currentScale = transform.localScale;
