@@ -36,10 +36,48 @@ namespace _ProjectFiles.Core.Video
         
         private void UpdateVolume(float value) => _videoPlayer.SetDirectAudioVolume(0, value);
 
+<<<<<<< Updated upstream
         private void TurnOffVideo(VideoPlayer player)
         {
             gameObject.SetActive(false);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+=======
+			_soundService.OnValueUpdated += UpdateVolume;
+		}
+
+		private void OnDisable()
+		{
+			_soundService.OnValueUpdated -= UpdateVolume;
+		}
+
+		private void UpdateVolume(float value) => _videoPlayer.SetDirectAudioVolume(0, value);
+		private void Update()
+		{
+			if (Input.GetKeyDown(KeyCode.Escape))
+			{
+				StopVideo();
+				TurnOffVideo(_videoPlayer);
+			}
+		}
+		private void StopVideo()
+		{
+			_videoPlayer.Stop();
+			//_videoPlayer.enabled = false;
+		}
+		private void TurnOffVideo(VideoPlayer player)
+		{
+			if (_videoPlayer.clip.name == "�������� 2")
+			{
+				SceneManager.LoadScene(0);
+			}
+			else
+			{
+				gameObject.SetActive(false);
+				SceneManager.LoadScene(sceneName);
+			}
+		}
+	}
+>>>>>>> Stashed changes
 }
